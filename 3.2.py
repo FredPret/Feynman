@@ -39,7 +39,9 @@ def main() -> float:
     for k, v in answer_dict.items():
         print(f"{k}: {v}")
 
-    return satellite_period_hours
+    answer = satellite_period_hours
+
+    return answer
 
 if __name__ == '__main__':
     sys.exit(main())
