@@ -1,7 +1,5 @@
 import sys
-from pathlib import Path
-sys.path.append(str(Path(__file__).resolve().parent.parent))
-from common import *
+from common.common import *
 
 
 def main() -> float:
