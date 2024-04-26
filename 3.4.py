@@ -1,7 +1,7 @@
 import sys
 from common.common import *
 
-
+# test
 def main() -> float:
     # Earth
     earth_diameter = 12756 * 1e3 # meters
