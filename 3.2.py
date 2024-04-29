@@ -2,7 +2,18 @@ import sys
 from common.common import *
 
 
-def main() -> float:
+def main(arg) -> float:
+    '''
+    calculate the orbital period of a satellite given a perigee and apogee in meters. Try it with 3.6e7 for both values!
+    '''
+    
+    if arg is None or arg == []:
+        satellite_perigee_above_surface = 225 * 1e3 # meters
+        satellite_apogee_above_surface = 710 * 1e3 # meters
+    else:
+        satellite_perigee_above_surface = float(arg[0])
+        satellite_apogee_above_surface = float(arg[1])
+
     # Earth
     earth_diameter = 12756 * 1e3 # meters
     earth_radius = earth_diameter / 2 # meters
@@ -14,8 +25,6 @@ def main() -> float:
 
     # satellite
     satellite_t2_r3_ratio = moon_t2_r3_ratio
-    satellite_perigee_above_surface = 225 * 1e3 # meters
-    satellite_apogee_above_surface = 710 * 1e3 # meters
     satellite_perigee_above_core = satellite_perigee_above_surface + earth_radius # meters
     satellite_apogee_above_core = satellite_apogee_above_surface + earth_radius # meters
     satellite_semi_major_axis = (satellite_perigee_above_core + satellite_apogee_above_core) / 2 # meters
@@ -40,8 +49,9 @@ def main() -> float:
         print(f"{k}: {v}")
 
     answer = satellite_period_hours
-
-    return answer
+    explanation = f'''This is the orbital period (in hours) for a sattelite with an apogee of {satellite_apogee_above_surface}m and a perigee of {satellite_perigee_above_surface}m'''
+    
+    return f"{explanation}: {answer}"
 
 if __name__ == '__main__':
-    sys.exit(main())
+    sys.exit(main(sys.argv[1:]))
