@@ -3,6 +3,9 @@ from common.common import *
 
 # test
 def main() -> float:
+    '''
+    calculate g on the Moon
+    '''
     # Earth
     earth_diameter = 12756 * 1e3 # meters
     earth_radius = earth_diameter / 2 # meters
@@ -21,8 +24,10 @@ def main() -> float:
         print(f"{k}: {v}")
 
     answer = moon_g
+    explanation = '''This is the acceleration in m/s due to gravity at the moon's surface:'''
     
-    return answer
+    return f"{explanation}: {answer}"
+
 
 if __name__ == '__main__':
     sys.exit(main())
