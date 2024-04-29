@@ -3,6 +3,9 @@ from common.common import *
 
 
 def main() -> float:
+    '''
+    calculate ratio between Earth's fastest and slowest orbital velocity
+    '''
     # Earth
     earth_orbit_eccentricity = 0.0167
     #c_div_a = earth_orbit_eccentricity
@@ -19,8 +22,9 @@ def main() -> float:
         print(f"{k}: {v}")
 
     answer = rp_div_ra
+    explanation = '''Earth moves this much faster at its closest point to the Sun compared to its furthest point'''
     
-    return answer
+    return f"{explanation}: {answer}"
 
 if __name__ == '__main__':
     sys.exit(main())
