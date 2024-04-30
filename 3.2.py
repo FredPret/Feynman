@@ -4,9 +4,11 @@ from common.common import *
 
 def main(arg) -> float:
     '''
-    calculate the orbital period of a satellite given a perigee and apogee in meters. Try it with 3.6e7 for both values!
+    calculate the orbital period of a satellite given a perigee and apogee in meters. 
+    Try it with 3.6e7 for both values!
+    Geostationary height = 35,786 km
     '''
-    
+
     if arg is None or arg == []:
         satellite_perigee_above_surface = 225 * 1e3 # meters
         satellite_apogee_above_surface = 710 * 1e3 # meters
@@ -33,16 +35,16 @@ def main(arg) -> float:
     satellite_period_hours = satellite_period_seconds / (60*60) # hours
 
     answer_dict = {
-        'earth_radius': earth_radius,
-        'satellite_t2_r3_ratio': satellite_t2_r3_ratio,
-        'satellite_perigee_above_surface': numberize(satellite_perigee_above_surface),
-        'satellite_apogee_above_surface': numberize(satellite_apogee_above_surface),
-        'satellite_perigee_above_core': numberize(satellite_perigee_above_core),
-        'satellite_apogee_above_core': numberize(satellite_apogee_above_core),
-        'satellite_semi_major_axis': numberize(satellite_semi_major_axis),
-        'satellite_t2': satellite_t2,
-        'satellite_period_seconds': numberize(satellite_period_seconds),
-        'satellite_period_hours': numberize(satellite_period_hours),
+        'earth_radius': str(earth_radius) + ' [m]',
+        'satellite_t2_r3_ratio': str(satellite_t2_r3_ratio),
+        'satellite_perigee_above_surface': str(numberize(satellite_perigee_above_surface)) + ' [m]',
+        'satellite_apogee_above_surface': str(numberize(satellite_apogee_above_surface)) + ' [m]',
+        'satellite_perigee_above_core': str(numberize(satellite_perigee_above_core)) + ' [m]',
+        'satellite_apogee_above_core': str(numberize(satellite_apogee_above_core)) + ' [m]',
+        'satellite_semi_major_axis': str(numberize(satellite_semi_major_axis)) + ' [m]',
+        'satellite_t2': str(satellite_t2) + ' [s**2]',
+        'satellite_period_seconds': str(numberize(satellite_period_seconds)) + ' [s]',
+        'satellite_period_hours': str(numberize(satellite_period_hours)) + ' [h]',
         }
     
     for k, v in answer_dict.items():
