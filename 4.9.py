@@ -40,12 +40,12 @@ def main(arg) -> float:
     '''
     sy3 is the end position: the ground
     sy3 = 0
-    sy3 = 0.5 * (-g) * t3 ** 2 + vy2 * t3 + sy2 + sy1
-    0.5 * g * t3 ** 2 = sy2 + sy1
-    t3 ** 2 = 2*(sy2 + sy1)
-    t3 = (2*(sy2 + sy1)) ** 0.5
+    sy3 = 0.5 * (-g) * t3 ** 2 + vy2 * t3 + sy2
+    0.5 * g * t3 ** 2 = sy2
+    t3 ** 2 = sy2 / (0.5 * g)
+    t3 = (sy2 / (0.5 * g)) ** 0.5
     '''
-    t3 = (2*(sy2 + sy1)) ** 0.5
+    t3 = (sy2 / (0.5 * g)) ** 0.5
 
     
     answer_dict = {
