@@ -2,7 +2,7 @@ import sys
 from common.common import *
 import math
 
-# test
+
 def main(arg) -> float:
     if arg is None or arg == []:
         d = 22.5 # meters

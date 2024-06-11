@@ -6,7 +6,10 @@ import math
 
 def main(arg) -> float:
 
-    # see https://farside.ph.utexas.edu/teaching/celestial/Celestial/node34.html and https://farside.ph.utexas.edu/teaching/celestial/Celestial/img738.png for more details
+    # see for more details:
+    # https://farside.ph.utexas.edu/teaching/celestial/Celestial/node34.html
+    # https://farside.ph.utexas.edu/teaching/celestial/Celestial/img738.png
+    # https://en.wikipedia.org/wiki/Orbital_elements
 
     # semi-major axis
     mercury_a = 0.38709893
